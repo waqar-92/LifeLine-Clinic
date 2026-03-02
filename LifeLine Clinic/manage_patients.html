@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Patients</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin_dashboard.css">
+    <link rel="stylesheet" href="./public/admin_dashboard.css">
+    <link rel="stylesheet" href="manage_patients.css">
+    <link rel="stylesheet" href="./public/manage_patients.css">
+
+    <script src="manage_patients.js" defer></script>
+</head>
+
+<body>
+    <!-- Inside body, above sidebar or inside header -->
+    <button id="sidebarToggle" class="sidebar-toggle">☰</button>
+
+    <div class="sidebar">
+        <div class="sidebar-header">Admin Panel</div>
+        <a href="/admindashboard">🏠 Admin Overview</a>
+        <a href="/managedoctors">👨‍⚕️ Manage Doctors</a>
+        <a href="/managepatients" class="active">👤 Manage Patients</a>
+        <a href="#" id="adminLogoutBtn" class="logout-btn">Logout</a>
+    </div>
+
+    <div class="main-content">
+        <h1>Manage Patients</h1>
+
+        <!-- Delete Patient Section -->
+        <div class="form-card">
+            <h2>Delete Patient</h2>
+            <form id="deletePatientForm">
+                <input type="number" id="patient_id" placeholder="Enter Patient ID" required>
+                <button type="submit" id="deleteButton">Delete Patient</button>
+            </form>
+        </div>
+
+        <!-- Patient List -->
+        <h2>Patients List</h2>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>DOB</th>
+                        <th>Gender</th>
+                    </tr>
+                </thead>
+                <tbody id="patientTableBody"></tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

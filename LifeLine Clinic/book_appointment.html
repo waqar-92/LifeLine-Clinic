@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Appointment - LifeLine HMS</title>
+
+<link rel="stylesheet" href="patient_dashboard.css">
+<link rel="stylesheet" href="admin_dashboard.css">
+<link rel="stylesheet" href="./public/patient_dashboard.css">
+<link rel="stylesheet" href="book_appointment.css">
+<link rel="stylesheet" href="./public/book_appointment.css">
+
+<!-- linking js file -->
+ <script src="book_appointment.js" defer></script>
+ <script src="./public/book_appointment.js" defer></script>
+
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+    <button id="sidebarToggle" class="sidebar-toggle">☰</button>
+<aside class="sidebar">
+    <div class="sidebar-header">LifeLine Clinic</div>
+    <a href="/patientdashboard">🏠 Dashboard</a>
+    <a href="/bookappointment" class="active">📅 Book Appointment</a>
+    <a href="/patientlogin" class="logout-btn">Logout</a>
+</aside>
+
+<main class="main-content">
+
+    <h1>Book Appointment</h1>
+
+    <!-- BOOKING FORM -->
+    <div class="form-card">
+        <h2>Appointment Details</h2>
+
+        <form id="appointmentForm">
+
+            <select id="doctor_id" required>
+                <option value="">Select Doctor</option>
+            </select>
+
+            <input type="date" id="appointment_date" required>
+            <input type="time" id="appointment_time" required>
+
+            <textarea id="reason" placeholder="Reason for visit"></textarea>
+
+            <button type="submit" id="sub_button">Submit Appointment</button>
+
+        </form>
+    </div>
+
+    <!-- DOCTOR CARDS -->
+    <h2>Available Doctors</h2>
+
+    <div class="doctor-grid" id="doctorCards"></div>
+
+</main>
+
+
+</body>
+</html>

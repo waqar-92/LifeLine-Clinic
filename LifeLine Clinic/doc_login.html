@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Login - LifeLine HMS</title>
+
+    <!-- linking css file -->
+    <link rel="stylesheet" href="./public/doc_login.css">
+    <link rel="stylesheet" href="doc_login.css">
+
+    <!-- linking js file -->
+    <script src="doc_login.js" defer></script>
+    <script src="./public/doc_login.js" defer></script>
+
+</head>
+<body>
+ <div class="login-container">
+    <div class="info-side" style="background: #27ae60;">
+        <div style="font-size: 60px;">🩺</div>
+        <h2>Doctor Portal</h2>
+        <p>Manage your daily schedule and provide the best care for your patients.</p>
+    </div>
+    <div class="form-side">
+        <h2>Login</h2>
+        <form id="DoctorLoginForm">
+            <label>Email</label>
+            <input type="text" name="email" id="email" placeholder="doc@gmail.com" required>
+            <label>Password</label>
+            <input type="password" name="password" id="password" placeholder="••••••••" required>
+            <button type="submit" id="doc_sub_btn" class="login-btn" style="background: #27ae60;">Login</button>
+            <p id="errorMessage"></p>
+        </form>
+        <div class="footer-links">
+            <a href="/loginportals">← Back to Selection</a>
+            <a href="/">← Back to Home</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

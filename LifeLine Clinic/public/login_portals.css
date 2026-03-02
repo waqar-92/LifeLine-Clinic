@@ -1,0 +1,97 @@
+/* Universal Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #2c3e50 25%, #2980b9 100%);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: white;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Container for the 3 Cards */
+.container {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Individual Portal Cards */
+.card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    text-align: center;
+    width: 280px;
+    transition: all 0.3s ease;
+    border-top: 5px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-top: 5px solid #3498db;
+}
+
+.icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.card h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.card p {
+    color: #7f8c8d;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+/* Styled Button */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #2980b9;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 15px rgba(41, 128, 185, 0.3);
+}
+
+.btn:hover {
+    background-color: #1a252f; /* Matches your login button hover */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

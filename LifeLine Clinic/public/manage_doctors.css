@@ -1,0 +1,26 @@
+/* Form Switch Buttons */
+.form-switch {
+    margin-bottom: 20px;
+}
+
+.form-switch button {
+    margin-right: 10px;
+}
+
+/* Form Card */
+.form-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+}
+
+.form-card input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Doctors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- lonking css files -->
+    <link rel="stylesheet" href="admin_dashboard.css">
+    <link rel="stylesheet" href="./public/admin_dashboard.css">
+    <link rel="stylesheet" href="manage_doctors.css">
+    <link rel="stylesheet" href="./public/manage_doctors.css">
+
+    <!-- linking js file -->
+    <script src="manage_doctors.js" defer></script>
+    <script src="./public/manage_doctors.js" defer></script>
+</head>
+
+<body>
+    <!-- Inside body, above sidebar or inside header -->
+    <button id="sidebarToggle" class="sidebar-toggle">☰</button>
+    <aside class="sidebar">
+        <div class="sidebar-header">Admin Panel</div>
+        <a href="/admindashboard">🏠 Admin Overview</a>
+        <a href="/managedoctors" class="active">👨‍⚕️ Manage Doctors</a>
+        <a href="/managepatients">👤 Manage Patients</a>
+        <a href="#" id="adminLogoutBtn" class="logout-btn">Logout</a>
+    </aside>
+
+    <div class="main-content">
+        <h1>Manage Doctors</h1>
+
+        <!-- SWITCH BUTTONS -->
+        <div class="form-switch">
+            <button id="showAdd">Add Doctor</button>
+            <button id="showDelete">Delete Doctor</button>
+        </div>
+
+        <!-- ADD DOCTOR FORM -->
+        <div id="addDoctorForm" class="form-card">
+            <h2>Add Doctor</h2>
+            <form id="addForm">
+                <input type="text" id="d_name" placeholder="Doctor Name" required>
+                <input type="email" id="d_email" placeholder="Email" required>
+                <input type="text" id="d_specialization" placeholder="Specialization" required>
+                <input type="text" id="d_phone" placeholder="Phone" required>
+                <input type="password" id="d_pass" placeholder="Set password for doctor" required>
+                <button type="submit" id="addButton">Add Doctor</button>
+            </form>
+        </div>
+
+        <!-- DELETE DOCTOR FORM -->
+        <div id="deleteDoctorForm" class="form-card" style="display:none;">
+            <h2>Delete Doctor</h2>
+            <form id="deleteForm">
+                <input type="number" id="doctor_id" placeholder="Doctor ID" required>
+                <button type="submit" id="deleteButton">Delete Doctor</button>
+            </form>
+        </div>
+
+        <!-- DOCTORS LIST -->
+        <h2>Doctors List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Specialization</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody id="doctorTableBody">
+            </tbody>
+        </table>
+
+    </div>
+
+
+</body>
+
+</html>

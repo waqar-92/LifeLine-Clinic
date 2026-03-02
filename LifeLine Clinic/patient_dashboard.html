@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard - LifeLine HMS</title>
+
+    <!-- linking css file -->
+    <link rel="stylesheet" href="./public/patient_dashboard.css">
+    <link rel="stylesheet" href="patient_dashboard.css">
+    <link rel="stylesheet" href="admin_dashboard.css">
+
+    <!-- linking js file -->
+    <script src="patient_dashboard.js" defer></script>
+
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <button id="sidebarToggle" class="sidebar-toggle">☰</button>
+    <aside class="sidebar">
+        <div class="sidebar-header">LifeLine Clinic</div>
+        <a href="/patientdashboard" class="active">🏠 Dashboard</a>
+        <a href="/bookappointment">📅 Book Appointment</a>
+        <a href="#" id="logoutBtn" class="logout-btn">Logout</a>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <h1>Welcome Back,<span id="patient_name">Patient Name</span> </h1>
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+                <h3 id="appointment_num">0</h3>
+                <p>Booked Appointments</p>
+            </div>
+
+
+        </div>
+
+        <h3>Appointments Booked By You</h3>
+
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Date</th>
+                        <th>Doctor</th>
+                        <th>Status</th>
+                        <th>Change Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="appointmentsTableBody"></tbody>
+            </table>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

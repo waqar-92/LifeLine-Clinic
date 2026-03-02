@@ -1,0 +1,212 @@
+ *{
+    box-sizing: border-box;
+
+ }
+ body {
+     background: linear-gradient(135deg, #2c3e50 25%, #2980b9 100%);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     margin: 0;
+     padding: 20px;
+ }
+
+ .reg-wrapper {
+     display: flex;
+     background: white;
+     width: 950px;
+     max-width: 100%;
+     height: 650px;
+     border-radius: 20px;
+     overflow: hidden;
+     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+ }
+
+ /* Left Branding Side */
+ .brand-side {
+     flex: 1;
+     background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(41, 128, 185, 0.8));
+     color: white;
+     padding: 50px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     text-align: center;
+ }
+
+ .brand-side h2 {
+     font-size: 32px;
+     margin-bottom: 20px;
+ }
+
+ .brand-side p {
+     font-size: 16px;
+     opacity: 0.9;
+     line-height: 1.6;
+ }
+
+ .brand-side .icon-big {
+     font-size: 100px;
+     margin-top: 30px;
+     opacity: 0.5;
+ }
+
+ /* Right Form Side */
+ .form-side {
+     flex: 1.5;
+     padding: 50px;
+     overflow-y: auto;
+ }
+
+ .form-side h2 {
+     color: #2c3e50;
+     margin-bottom: 5px;
+ }
+
+ .form-side p {
+     color: #7f8c8d;
+     margin-bottom: 30px;
+     font-size: 14px;
+ }
+
+ .input-grid {
+     display: grid;
+     grid-template-columns: 1fr;
+     gap: 20px;
+ }
+
+ .input-group label {
+     display: block;
+     font-size: 12px;
+     font-weight: bold;
+     color: #34495e;
+     margin-bottom: 8px;
+     text-transform: uppercase;
+ }
+
+ input,
+ select {
+     width: 100%;
+     padding: 12px;
+     border: 1.5px solid #eaeeef;
+     border-radius: 8px;
+     background: #f8fafb;
+     font-size: 14px;
+     transition: 0.3s;
+ }
+
+ input:focus {
+     border-color: #2980b9;
+     background: white;
+     outline: none;
+     box-shadow: 0 0 10px rgba(41, 128, 185, 0.1);
+ }
+
+ .register-btn {
+     width: 100%;
+     background: #2980b9;
+     color: white;
+     padding: 15px;
+     border: none;
+     border-radius: 8px;
+     font-size: 16px;
+     font-weight: bold;
+     cursor: pointer;
+     margin-top: 30px;
+     transition: 0.3s;
+ }
+
+ .register-btn:hover {
+     background: #1a252f;
+     transform: translateY(-2px);
+ }
+
+ .login-link {
+     text-align: center;
+     margin-top: 25px;
+     font-size: 14px;
+     color: #7f8c8d;
+ }
+
+ .login-link a {
+     color: #2980b9;
+     text-decoration: none;
+     font-weight: bold;
+ }
+
+ .msg {
+     text-align: center;
+     margin-bottom: 15px;
+     font-weight: bold;
+ }
+
+ /* ========================= */
+ /* RESPONSIVE MEDIA QUERIES */
+ /* ========================= */
+
+ /* ============================= */
+ /* STACK INPUT FIELDS VERTICALLY */
+ /* ============================= */
+
+ /* Tablets and smaller */
+ @media (max-width: 768px) {
+
+     /* Stack the wrapper vertically */
+     .reg-wrapper {
+         flex-direction: column;
+         height: auto;
+     }
+
+     /* Stack inputs vertically */
+     .input-grid {
+         display: grid !important;
+         /* ensure grid is applied */
+         grid-template-columns: 1fr !important;
+         /* force single column */
+         gap: 15px !important;
+     }
+
+     /* Override full-width span */
+     .full-width {
+         grid-column: span 1 !important;
+     }
+
+     input,
+     select {
+         width: 100% !important;
+         /* force full width */
+     }
+ }
+
+ /* Mobile devices */
+ @media (max-width: 480px) {
+     .reg-wrapper {
+         flex-direction: column;
+         height: auto;
+     }
+
+     .input-grid {
+         display: grid !important;
+         grid-template-columns: 1fr !important;
+         /* stack vertically */
+         gap: 12px !important;
+     }
+
+     .full-width {
+         grid-column: span 1 !important;
+     }
+
+     input,
+     select {
+         width: 100% !important;
+         padding: 10px;
+         font-size: 13px;
+     }
+
+     .register-btn {
+         width: 100% !important;
+         padding: 12px;
+         font-size: 14px;
+     }
+ }

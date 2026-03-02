@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Admin Panel - HMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- linking css file -->
+    <link rel="stylesheet" href="./public/admin_dashboard.css">
+    <link rel="stylesheet" href="admin_dashboard.css">
+
+    <!-- linking js file -->
+    <script src="admin_dashboard.js" defer></script>
+    <script src="./public/admin_dashboard.js" defer></script>
+
+</head>
+
+<body class="admin-panel">
+    <!-- Inside body, above sidebar or inside header -->
+    <button id="sidebarToggle" class="sidebar-toggle">☰</button>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h3>LifeLine ADMIN</h3>
+        </div>
+        <a href="/admindashboard" class="active">🏠 Admin Overview</a>
+        <a href="/managedoctors">👨‍⚕️ Manage Doctors</a>
+        <a href="/managepatients">👤 Manage Patients</a>
+        <a href="#" id="adminLogoutBtn" class="logout-btn">Logout</a>
+    </aside>
+
+    <div class="main-content">
+        <h1>Clinic Management Control</h1>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3 id="doc_num">15</h3>
+                <p>Registered Doctors</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="patients_num">250</h3>
+                <p>Registered Patients</p>
+            </div>
+
+        </div>
+
+        <h3>Appointments</h3>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Patient</th>
+                        <th>Doctor</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="appointmentsTable">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>

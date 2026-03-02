@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - LifeLine HMS</title>
+    <link rel="stylesheet" href="patient_registration.css">
+    <link rel="stylesheet" href="./public/patient_registration.css">
+    <script defer src="patient_registration.js"></script>
+    <script defer src="./public/patient_registration.js"></script>
+</head>
+<body>
+
+<div class="reg-wrapper">
+
+    <!-- Brand Side -->
+    <div class="brand-side">
+        <h2>Join Our Care Network</h2>
+        <p>Register today to get instant access to medical consultations, digital prescriptions, and health tracking.</p>
+        <div class="icon-big">🏥</div>
+    </div>
+
+    <!-- Form Side -->
+    <div class="form-side">
+        <h2>Create an Account</h2>
+        <p>Please fill in your details to get started.</p>
+
+        <form id="registrationForm">
+
+            <div class="input-grid">
+
+                <div class="full-width" id="NameBox">
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input id="p_name" type="text" name="p_name" placeholder="Johnathan Doe" required>
+                    </div>
+                </div>
+
+                <div class="input-group" id="EmailBox">
+                    <label>Email Address</label>
+                    <input id="p_email" type="email" name="p_email" placeholder="john@example.com" required>
+                </div>
+
+                <div class="input-group" id="PhoneBox">
+                    <label>Phone Number</label>
+                    <input id="p_phone" type="text" name="p_phone" placeholder="03001234567" required>
+                </div>
+
+                <div class="input-group" id="DOBBox">
+                    <label>Date of Birth</label>
+                    <input id="p_dob" type="date" name="p_dob" required>
+                </div>
+
+                <div class="input-group" id="GenderBox">
+                    <label>Gender</label>
+                    <select id="p_gender" name="p_gender" required>
+                        <option value="" selected disabled>Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="full-width" id="PassBox">
+                    <div class="input-group">
+                        <label>Password</label>
+                        <input id="p_pass" type="password" name="p_pass" placeholder="••••••••" required>
+                    </div>
+                </div>
+
+            </div>
+
+            <button type="submit" name="submit" id="SubButton" class="register-btn">Create My Account</button>
+
+            <div class="login-link">
+                Already have an account? <a href="/patientlogin">Login here</a>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+
+.form-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+}
+
+.form-card input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* ========================= */
+/* TABLETS (≤768px) */
+/* ========================= */
+@media (max-width: 768px) {
+
+    .main-content {
+        padding: 60px 20px 20px;
+    }
+
+    .form-card {
+        padding: 18px;
+    }
+
+    .form-card h2 {
+        font-size: 20px;
+    }
+
+    .form-card input {
+        font-size: 14px;
+        padding: 9px;
+    }
+
+    .form-card button {
+        width: 100%;
+    }
+
+    /* Make table scrollable */
+    table {
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    table th,
+    table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    table th,
+    table td {
+        white-space: nowrap;
+        font-size: 14px;
+
+}
+}
+
+/* ========================= */
+/* MOBILE (≤480px) */
+/* ========================= */
+@media (max-width: 480px) {
+
+    .main-content {
+        padding: 60px 15px 15px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .form-card {
+        padding: 15px;
+    }
+
+    .form-card h2 {
+        font-size: 18px;
+    }
+
+    .form-card input {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .form-card button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    table th,
+    table td {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    table {
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}

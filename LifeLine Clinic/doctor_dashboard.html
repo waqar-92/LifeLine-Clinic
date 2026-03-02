@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard - LifeLine HMS</title>
+
+    <!-- linking css file -->
+    <link rel="stylesheet" href="./public/doctor_dashboard.css">
+    <link rel="stylesheet" href="doctor_dashboard.css">
+    <link rel="stylesheet" href="admin_dashboard.css">
+
+    <!-- linking js file -->
+    <script src="doctor_dashboard.js" defer></script>
+
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <button id="sidebarToggle" class="sidebar-toggle">☰</button>
+    <aside class="sidebar">
+        <div class="sidebar-header">LIFELINE HMS</div>
+        <a href="/doctordashboard" class="active">🏠 Dashboard</a>
+        <a href="#" id="logoutBtn" class="logout-btn">Logout</a>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <h1>Welcome Back,<span id="doc_name">Doctor Name</span> </h1>
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+                <h3 id="pen_appointment_num">0</h3>
+                <p>Pending Appointments</p>
+            </div>
+
+            <div class="stat-card">
+                <h3 id="total_appointment_num">0</h3>
+                <p>Total Appointments Till the day</p>
+            </div>
+
+
+        </div>
+
+        <h3>Recent Appointments</h3>
+
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Appointment ID</th>
+                        <th>Patient Name</th>
+                        <th>Appointment Date</th>
+                        <th>Appointment Time</th>
+                        <th>Status</th>
+                        <th>Change Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="appointmentsTableBody"></tbody>
+            </table>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

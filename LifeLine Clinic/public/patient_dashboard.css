@@ -1,0 +1,185 @@
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    margin:0;
+    background:#f4f7f6
+}
+.sidebar{
+    width:260px;
+    background:#2c3e50;
+    position:fixed;
+    height:100vh;
+    display:flex;
+    flex-direction:column
+}
+.sidebar-header{
+    padding:20px;
+    background:#2980b9;
+    color:#fff;
+    font-weight:bold;
+    text-align:center
+}
+.sidebar a{
+    color:#bdc3c7;
+    padding:15px 25px;
+    text-decoration:none;
+    border-bottom:1px solid #34495e;
+    transition: 0.3s;
+}
+.sidebar a:hover,
+.sidebar a.active{
+    background:#34495e;
+    color:#fff;
+    padding-left:35px
+}
+.logout-btn{
+    margin-top:auto;
+    background:#c0392b;
+    color:#fff!important
+}
+.main-content{
+    margin-left:260px;
+    padding:30px
+}
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px
+}
+
+.stat-card{
+    background:#fff;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 0 12px rgba(0,0,0,.1);
+    text-align:center;
+}
+
+.stat-card h3{
+    color:#2980b9;
+    margin:0;
+    font-size:26px
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+    margin-top:20px;
+    border-radius:10px;
+}
+
+th,td{
+    padding:14px;
+    border-bottom:1px solid #eee
+}
+
+td{
+    text-align: center;
+}
+
+th{
+    background:#2980b9;
+    color:#fff
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* ========================== */
+/* LARGE TABLETS (≤1024px) */
+/* ========================== */
+@media (max-width: 1024px) {
+
+    .main-content {
+        margin-left: 220px; /* if sidebar shrinks */
+        padding: 25px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 15px;
+    }
+
+    .stat-card {
+        padding: 20px;
+    }
+
+    .stat-card h3 {
+        font-size: 22px;
+    }
+
+    th, td {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
+
+/* ========================== */
+/* TABLETS (≤768px) */
+/* ========================== */
+@media (max-width: 768px) {
+
+    .main-content {
+        margin-left: 0;   /* sidebar handled separately */
+        padding: 70px 20px 20px; /* space for toggle */
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr; /* stack cards */
+        gap: 15px;
+    }
+
+    .stat-card {
+        padding: 18px;
+    }
+
+    .stat-card h3 {
+        font-size: 20px;
+    }
+
+    /* Responsive table wrapper behavior */
+    table {
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th, td {
+        font-size: 13px;
+        padding: 10px;
+    }
+}
+
+/* ========================== */
+/* MOBILE (≤480px) */
+/* ========================== */
+@media (max-width: 480px) {
+
+    .main-content {
+        padding: 70px 15px 15px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .stat-card {
+        padding: 15px;
+    }
+
+    .stat-card h3 {
+        font-size: 18px;
+    }
+
+    table {
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th, td {
+        font-size: 12px;
+        padding: 8px;
+    }
+}

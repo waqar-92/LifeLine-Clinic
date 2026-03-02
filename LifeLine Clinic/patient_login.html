@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Login - LifeLine HMS</title>
+
+    <!-- linking css file -->
+    <link rel="stylesheet" href="patient_login.css">
+    <link rel="stylesheet" href="./public/patient_login.css">
+
+    <!-- linking js file -->
+     <script defer src="patient_login.js"></script>
+     <script defer src="./public/patient_login.js"></script>
+    
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="info-side">
+            <div style="font-size: 60px;">👤</div>
+            <h2>Patient Portal</h2>
+            <p>Access your medical records and book appointments with ease.</p>
+        </div>
+        <div class="form-side">
+            <h2>Login</h2>
+
+
+            <form id="loginForm">
+                <label>Email Address</label>
+                <input type="email" id="email" name="email" required>
+                <label>Password</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit" class="login-btn" id="patient_sub_btn">Login</button>
+                <p id="errorMessage"></p>
+            </form>
+            <div class="footer-links">
+                <div id="notreg">
+                    <p>Don't have account?</p>
+                    <a href="/patientreg">Register Now</a><br>
+                </div>
+                <a href="/loginportals">← Back to Selection</a><br>
+                <a href="/">← Back to Home</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
